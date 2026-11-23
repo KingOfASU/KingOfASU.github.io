@@ -1,4 +1,4 @@
-/* Café XYZ color scheme (exported from Realtime Colors) */
+
 :root {
     --text: #1e233e;
     --background: #ffffff;
@@ -32,8 +32,10 @@ header {
 .logo {
     width: 80px;
     height: 80px;
+    padding: 4px;
     border-radius: 50%;
     background-color: var(--background);
+    object-fit: contain;
 }
 
 .brand h1 {
@@ -164,5 +166,83 @@ footer a {
     header {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+
+.page-intro {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.page-intro .intro-text {
+    flex: 1;
+}
+
+.page-image {
+    flex: 1;
+    width: 50%;
+    max-width: 100%;
+    max-height: 420px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+caption {
+    padding: 8px;
+    font-style: italic;
+    text-align: left;
+}
+
+th {
+    padding: 12px;
+    background-color: var(--primary);
+    color: var(--background);
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #cccccc;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f5f1;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 220px;
+    padding: 15px 20px;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+}
+
+.card h4 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+@media (max-width: 700px) {
+    .page-intro {
+        flex-direction: column;
+    }
+
+    .page-image {
+        width: 100%;
     }
 }
